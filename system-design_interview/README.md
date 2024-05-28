@@ -156,8 +156,84 @@ eg <ul><li>How do we scale an application through load balancing.
 </ul>  
 <li>Identifying and Resolving Bottlenecks  
 Bottlenecks are restrictive elements that limits the system's perfomance.  
-eg Do you have nough replicas of the database to handle failures. 
+eg Do you have nough replicas of the database to handle failures.  
 
+## SAMPLE SYSTEM DESIGN INTERVIEW QUESTIONS AND SOLUTIONS   
+<ol>
+<li> How would you design a URL Shortening service similar to TinyURL?   
+
+URL shortening service allows users to shorten the long URLs.  
+REQUIREMENT CLARIFICATION  
+<ul>
+<li>When you give a long URL as an input, it should return the shortened URL.  
+<li>When you click the shortened URL, it should redirect to the original URL.  
+<li>Consider 500 requests per second, and make scalable accordingly.  
+<li>Delete the expired URLs.
+<li>Track the number of clicks on the URL.  
+</ul>
+Approach:  
+<ul>
+<li>How you will use the REST API to communicate with the server.
+<li>How will you handle the 500 requests every second via load balancing?
+<li>You can discuss using the relational database, as it doesn’t require horizontal scaling.
+<li>You can discuss how you will prepare a table for relational database to map long URLs with short URLs.
+<li>The critical point is how to shorten the long URL by providing a unique id to each shortened URL.  
+</ul>
+<li>How would you design a Web Crawler?  
+
+The Web crawlers allow to extract the information from different web pages.   
+REQUIREMENT CLARIFICATION 
+<ul>
+<li>What is the primary goal of the web crawler?
+<li>Define the types of content to be extracted (e.g., text, images, metadata, specific HTML elements).
+<li>Specify the websites or domains to be crawled.
+<li>How often should the crawler run? (e.g., real-time, daily, weekly)
+<li>Specify the retry logic for failed requests.
+</ul>
+Approach  
+<ul>
+<li>You can discuss how you open multiple web pages in the web browser.
+<li> It is important to know how many browser windows you will open simultaneously to crawl multiple web pages.
+<li>You can also discuss changing the web pages and domains dynamically.
+</ul>
+<li>How would you design Facebook and Instagram?  
+Here , you are required to build a social application.  
+REQUIREMENT APPLICATION  
+<ul>
+<li>User signup/sign-in.
+<li>Allowing users to publish posts and short videos.
+<li>Followers and following features.
+<li>Direct messaging.
+<li>Showing the latest posts from their followers.
+<li>Showing trending posts in the feed.
+</ul>
+Approach  
+<ul>
+<li>Talk about how you will handle the relationship between users in the database.
+<li>Talk about how you will implement the chat features. <li>You may talk about integrating third-party chatting applications.
+<li>Furthermore, you can discuss how you will implement the authentication.
+<li>Discuss algorithms to show trending or latest posts.
+<li>Talk about handling user’s data in the database, as users will publish multiple posts.
+<li>Discuss database replication to handle failures.
+<li>Discuss data caching and load balancing.
+</ul>
+<li>How would you design the API rate limit?  
+The API rate limiter allows one to make a particular number of API requests in a specified time.  
+ If the API request increases, it blocks the request for some time.  
+ REQUIREMENT CLARIFICATION  
+ <ul>
+ <li>Define the maximum number of requests allowed per unit of time (e.g., per second, minute, hour).
+ <li>Define the primary goal of the rate limiter (e.g., prevent abuse, ensure fair usage, protect backend services).
+ <li> Ensure the rate limiter is efficient and does not become a bottleneck.
+ <li>Design the rate limiter to scale with increasing traffic and number of users.
+ <li>Ensure the rate limiter can handle failures and fallback scenarios.
+ <ul>
+ Approach  
+ <ul>
+ <li>Talk about rate-limit matrics. How many maximum requests do you want to allow per second?
+ <li>Talk about how you will handle multiple requests simultaneously.
+ <li>Talk about how you can keep count of requests. You may use the IP address received in the request header. 
+ </ul>
 
 
 
