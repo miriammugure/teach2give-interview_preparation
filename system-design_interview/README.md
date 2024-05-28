@@ -128,7 +128,7 @@ HTTPS is a secure versio of HTTP.
 <li>UDP-user datagram protocol. It is used mainly for live streaming where data loss can be tolerable.  
 <li>WebSockets- Used for bidirectional duplex communication.It builds connection between two web applications.
 </ul>
-<!-- ##APPROACHING SYSTEM DESIGN INTERVIEW QUESTIONS  
+ ##APPROACHING SYSTEM DESIGN INTERVIEW QUESTIONS  
 
 STEP BY STEP GUIDE  
 <ol>
@@ -156,7 +156,7 @@ eg <ul><li>How do we scale an application through load balancing.
 </ul>  
 <li>Identifying and Resolving Bottlenecks  
 Bottlenecks are restrictive elements that limits the system's perfomance.  
-eg Do you have nough replicas of the database to handle failures. -->
+eg Do you have nough replicas of the database to handle failures. 
 
 
 
