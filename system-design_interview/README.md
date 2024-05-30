@@ -10,6 +10,8 @@
     - [Availability Patterns](#availability-patterns)
   - [Advanced Concepts](#advanced-concepts)
   - [COMPONENTS OF SYSTEM DESIGN](#components-of-system-design)
+  - [APPROACHING SYSTEM DESIGN INTERVIEW QUESTIONS](#approaching-system-design-interview-questions)
+  - [SAMPLE SYSTEM DESIGN INTERVIEW QUESTIONS AND SOLUTIONS](#sample-system-design-interview-questions-and-solutions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
